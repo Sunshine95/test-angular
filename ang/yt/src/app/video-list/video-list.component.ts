@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AskYTService } from '../ask-yt.service';
 
 @Component({
   selector: 'app-video-list',
@@ -7,22 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private videoList:AskYTService) { 
+    for(let v of videoList.getVideoList().videosList){
+      this.videoResult.push(v.name);
+    }  
+  }
 
   ngOnInit(): void {
   }
-
-  videoResult: Array<string> = [];
-  titles: Array<string> = ['Amazing ','Watch! ','Lates news about ','Don\'t miss out on '];
 
   myEvent(st : string){
     console.log(st);
   }
 
+  videoResult: Array<string> = []; 
   searchEvent(query: string){
-    this.videoResult = [];
-    for(let i = 0; i < this.titles.length; i++){
-      this.videoResult.push(this.titles[i]+query);
-    }
+    return this.videoResult;
   }
+
 }
