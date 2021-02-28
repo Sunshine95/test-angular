@@ -3,23 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VideosComponent } from './videos.component';
-import { VideoHighlightComponent } from './video-highlight/video-highlight.component';
-import { VideosService } from './videos.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    VideosComponent,
-    VideoHighlightComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [
-    VideosService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
