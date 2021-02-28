@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'yt';
+  title = 'YT';
+  nicName = 'Tony';
+  getVideo(){
+    return "I am learning ts syntax"
+  };
 }
