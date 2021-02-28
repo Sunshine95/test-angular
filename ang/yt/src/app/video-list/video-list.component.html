@@ -1,6 +1,16 @@
-<ul>
-    <li>video 1</li>
-    <li>video 2</li>
-    <li>video 3</li>
-    <li>video 4</li>
+
+<input #query />
+
+<br><br> 
+
+<button
+(click)= "searchEvent(query.value)"
+>Search!</button>
+
+<br><br>
+
+<ul 
+*ngFor="let i of videoResult">
+  <li>{{[i]}}</li>
+
 </ul>

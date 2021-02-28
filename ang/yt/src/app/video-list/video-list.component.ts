@@ -12,4 +12,17 @@ export class VideoListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  videoResult: Array<string> = [];
+  titles: Array<string> = ['Amazing ','Watch! ','Lates news about ','Don\'t miss out on '];
+
+  myEvent(st : string){
+    console.log(st);
+  }
+
+  searchEvent(query: string){
+    this.videoResult = [];
+    for(let i = 0; i < this.titles.length; i++){
+      this.videoResult.push(this.titles[i]+query);
+    }
+  }
 }
