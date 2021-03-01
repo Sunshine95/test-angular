@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'YT';
-  nicName = 'Tony';
-  getVideo(){
-    return "I am learning ts syntax"
-  };
+  title = 'YouTube API';
+  nicName = 'DG';
 }

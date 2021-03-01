@@ -12,13 +12,16 @@ import { Observable } from 'rxjs';
 })
 export class VideoListComponent implements OnInit {
 
-  constructor(private videoList:AskYTService) { 
+  constructor(private serviceObjectYT:AskYTService) { 
     
   }
 
+  videos:any;
+  defaultQuery:string = "kittens";
+
   ngOnInit(): void {
-    this.videoList.getVideoList("kittens").subscribe((data)=> {
-      console.log(data);
+    this.serviceObjectYT.getVideoList(this.defaultQuery).subscribe((data)=> {
+       this.videos = data.items;
     })
   }
 
@@ -26,10 +29,9 @@ export class VideoListComponent implements OnInit {
     console.log(st);
   }
 
-  
   searchEvent(query: string){
-    this.videoList.getVideoList(query).subscribe((data) => {
-      console.log(data);
+    this.serviceObjectYT.getVideoList(query).subscribe((data) => {
+      this.videos = data.items;
     })    
   }
 

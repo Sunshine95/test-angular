@@ -1,19 +1,22 @@
-
 <input #query />
-
-<br><br> 
-
-<button
-(click)= "searchEvent(query.value)"
->Search!</button>
+<br><br>
+<button (click)="searchEvent(query.value)">Search!</button>
 
 <br><br>
 
 <p></p>
 
-<!-- 
-<ul 
-*ngFor="let i of videoResult">
-  <li>{{i}}</li>
 
-</ul> -->
+<div>
+  <ul *ngFor="let v of videos">
+
+    <img width=480 height=360 src={{v.snippet.thumbnails.high.url}} />
+
+    <br>
+    <a href="https://youtube.com/watch?v={{v.id.videoId}}">{{v.snippet.title}}</a>
+
+    <br>
+    Published At : {{v.snippet.publishTime}}
+
+  </ul>
+</div>

@@ -13,22 +13,22 @@ export class AskYTService {
     
     let d:Date = new Date(Date.now());
     d.setHours(d.getHours() - 2);
+    let publishedAfter:string = d.toISOString();
+    console.log(publishedAfter);
+    const YOUR_API_KEY:string = "AIzaSyCv5w5qrUukzbhiSp5_VR1Q6XLAVCdEv-E"
 
-    const YOUR_API_KEY:string = "AIzaSyAGIidNqFhPvsTPDsf3YV2MIhWkbPb3tf4"
-
-    let params:HttpParams = new HttpParams()
-    .set('part', 'snippet')
-    .set('maxResults', '5')
-    .set('order', 'date')
-    .set('publishedAfter', encodeURIComponent(d.toISOString()))
-    .set('q', encodeURIComponent(query))
-    .set('type', 'video')
-    .set('key', YOUR_API_KEY);
-   
+    let params:string =
+    'part'                    + '=' + 'snippet'                          + '&' +
+    'maxResults'              + '=' + '10'                               + '&' +
+    'order'                   + '=' + 'date'                             + '&' +
+    'publishedAfter'          + '=' + encodeURIComponent(publishedAfter) + '&' +
+    'q'                       + '=' + encodeURIComponent(query)          + '&' +
+    'type'                    + '=' + 'video'                            + '&' +
+    'key'                     + '=' + YOUR_API_KEY;
     
-    const url = "https://youtube.googleapis.com/youtube/v3/search" + params.toString();
-
-    // return url;
+    const url = "https://youtube.googleapis.com/youtube/v3/search?" + params;
+    
     return this.http.get(url);
+
   }
 }
