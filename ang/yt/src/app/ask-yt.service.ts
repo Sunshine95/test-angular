@@ -15,7 +15,7 @@ export class AskYTService {
     d.setHours(d.getHours() - 2);
     let publishedAfter:string = d.toISOString();
     console.log(publishedAfter);
-    const YOUR_API_KEY:string = "AIzaSyCv5w5qrUukzbhiSp5_VR1Q6XLAVCdEv-E"
+    const YOUR_API_KEY:string = "[YOUR_API_KEY]"
 
     let params:string =
     'part'                    + '=' + 'snippet'                          + '&' +
