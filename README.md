@@ -1,6 +1,8 @@
 # youtubeAPI
+for a predefined query, 
+check for updates every hour,
+and display latest uploads,
+ordered by publish time.
 
-An interface to search for the latest videos for particular query on youtube, say all videos about "kittens" uploaded in "the past 2 hours". 
-
-Uses youtube's data API.
-Made on Angular 11
+Now making as a proper app 
+with JS framwork Angular
