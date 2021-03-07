@@ -25,10 +25,6 @@ export class VideoListComponent implements OnInit {
     })
   }
 
-  myEvent(st : string){
-    console.log(st);
-  }
-
   searchEvent(query: string){
     this.serviceObjectYT.getVideoList(query).subscribe((data) => {
       this.videos = data.items;

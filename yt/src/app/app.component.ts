@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'YouTube API';
-  nicName = 'DG';
+  nicName = 'Tony DG';
 }
