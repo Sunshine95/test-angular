@@ -1,8 +1,9 @@
 https://youtube.googleapis.com/youtube/v3/search?\
-part=snippet & \
-q={{QUERY}} &\ 
 key={{YOUTUBE_DATA_API_KEY}} &\
+maxResuls = 10 &\
 order=date &\
-type=video &\
+part=snippet &\
 publishedAfter={{RECENT-TIME-STAMP}} &\
 publishedBefore={{TIME-STAMP}}
+q={{QUERY}} &\ 
+type=video &\
