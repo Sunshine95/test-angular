@@ -4,6 +4,6 @@ maxResuls = 10 &\
 order=date &\
 part=snippet &\
 publishedAfter={{RECENT-TIME-STAMP}} &\
-publishedBefore={{TIME-STAMP}}
+publishedBefore={{TIME-STAMP}} &\
 q={{QUERY}} &\ 
 type=video &\
